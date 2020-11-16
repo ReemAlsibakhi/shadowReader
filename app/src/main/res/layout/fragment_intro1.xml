@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layoutDirection="rtl"
+    android:background="@android:color/white"
+    android:layout_height="match_parent">
+
+<!--    <Button-->
+<!--        android:id="@+id/btn_skip"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_alignParentEnd="true"-->
+<!--        android:text="Skip"-->
+<!--        android:textSize="@dimen/_12ssp"-->
+<!--        android:textColor="@android:color/white"-->
+<!--        android:fontFamily="@font/roboto_regular"-->
+<!--        android:textAllCaps="false"-->
+<!--        android:layout_margin="@dimen/_16sdp"-->
+<!--        style="?borderlessButtonStyle"-->
+<!--        android:background="@drawable/skip_button_shape"/>-->
+
+    <RelativeLayout
+        android:id="@+id/relative"
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_16sdp"
+        android:background="@drawable/rectangle_intro">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_alignParentStart="true"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/tv_discover"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/_21ssp"
+                android:fontFamily="@font/roboto_bold"
+                android:text=""/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/cairo"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="@string/thank_download_app"
+                android:textColor="#CABCBC"
+                android:textSize="@dimen/_12ssp" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/relative"
+        android:layout_marginTop="-50dp"
+        android:src="@drawable/ic_group_22990" />
+</RelativeLayout>

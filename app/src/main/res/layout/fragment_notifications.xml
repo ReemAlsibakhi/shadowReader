@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:fillViewport="true"
+    tools:context=".fragment.NotificationsFragment">
+   <RelativeLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content">
+
+
+    <RelativeLayout
+        android:id="@+id/background"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_home__background" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingTop="@dimen/_37sdp"
+        >
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Student Name"
+            android:textSize="@dimen/_20ssp"
+            android:paddingStart="@dimen/_16sdp"
+            android:paddingEnd="@dimen/_16sdp"
+            android:fontFamily="@font/roboto_bold"
+            android:textColor="@android:color/white"/>
+        <LinearLayout
+            android:id="@+id/linear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/_16sdp"
+            android:paddingEnd="@dimen/_16sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="05*****"
+                android:textSize="@dimen/_13ssp"
+                android:fontFamily="@font/roboto_bold"
+                android:textColor="@android:color/white"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="School Name"
+                android:textSize="@dimen/_13ssp"
+                android:fontFamily="@font/roboto_bold"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:textColor="@color/colorYellow"/>
+        </LinearLayout>
+
+        <!--       <LinearLayout-->
+        <!--           android:layout_width="wrap_content"-->
+        <!--           android:layout_height="wrap_content"-->
+        <!--           android:orientation="vertical"-->
+        <!--           android:layout_marginTop="@dimen/_40sdp">-->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_notify"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/_26sdp"
+            />
+
+    </LinearLayout>
+
+   </RelativeLayout>
+
+</ScrollView>

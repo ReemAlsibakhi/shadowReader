@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#862F46</color>
+    <color name="colorPrimaryDark">#862F46</color>
+    <color name="colorAccent">#4CD964</color>
+    <color name="colorYellow">#FECA0A</color>
+    <color name="colorGreen">#26B99A</color>
+
+    <!-- for Night mode -->
+    <color name="colorWhite">#212121</color>
+    <color name="textColor">#fff</color>
+    <color name="textColorLight">#F3F2F2</color>
+
+</resources>

@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">Shadow Reader</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="lessons_first_semester">Lessons First Semester</string>
+    <string name="lessons_second_semester">Lessons Second Semester</string>
+    <string name="descrip_upload_record">بعد التمكن من القراءة قم بتسجيل صوتك وارساله وسيصلكم تقييم لقراءتكم قريبا.</string>
+    <string name="upload_your_recording">رفع تسجيل الصوت الخاص بك</string>
+    <string name="make_future">و تذكروا دوما بكم نصنع المستقبل</string>
+    <string name="thank_download_app">أعزائي الطلبة : أشكركم على تحميل هذا التطبيق. لتتمكنوا من تحسين قراءتكم اتبعوا الخطوات التالية:</string>
+    <string name="watch_the_videos">شاهد مقاطع الفيديو</string>
+    <string name="listen_video_clip">١- استمع جيدا للمقطع الصوتي و تتبع على الكتاب المدرسي.</string>
+    <string name="repeat_listen">2- كرر الاستماع للمقطع و حاول القراءة معه لا بعده.</string>
+    <string name="align_sound">3- حاول بمحاذاة الصوت مراعاة النطق السليم بالإضافة إلى السرعة في القراءة أو تغيير نبرة الصوت في بعض المقاطع.</string>
+    <string name="enter_username">Please enter full name</string>
+    <string name="enter_username_valid">Please, full name must at least 6 characters</string>
+    <string name="enter_mobile">please enter a mobile number</string>
+    <string name="enter_valid_mobile">Mobile must prefix with 05, length it equals 10</string>
+    <string name="register_success">register successfully</string>
+    <string name="login_success">login successfully</string>
+    <string name="select_school">Select School</string>
+    <string name="search">search</string>
+    <string name="enter_school">Please, select your school</string>
+    <string name="logout_success">"logout successful "</string>
+    <string name="player_error">Error initializing YouTube player: %s</string>
+    <string name="seek_to">Jump To</string>
+    <string name="seek_to_hint">Seconds</string>
+</resources>

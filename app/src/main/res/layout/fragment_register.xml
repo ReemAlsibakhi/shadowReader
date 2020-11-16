@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorPrimary"
+    android:paddingStart="@dimen/_16sdp"
+    android:paddingEnd="@dimen/_16sdp"
+    android:layoutDirection="ltr"
+    tools:context=".fragment.RegisterFragment">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/_37sdp"
+        android:paddingStart="@dimen/_16sdp"
+        android:paddingEnd="@dimen/_16sdp"
+        android:paddingBottom="@dimen/_27sdp"
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        android:background="@drawable/login_shape">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/_12sdp"
+            android:paddingEnd="@dimen/_12sdp"
+            android:paddingTop="@dimen/_7sdp"
+            android:background="@drawable/edittext_shape">
+            <ImageView
+                android:id="@+id/ic_user"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_user" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="14dp"
+                android:layout_toEndOf="@id/ic_user"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="Full Name"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/_13ssp" />
+
+                <EditText
+                    android:id="@+id/et_fullName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:fontFamily="@font/roboto_regular"
+                    android:hint="Full Name"
+                    android:padding="@dimen/_5sdp"
+                    android:maxLines="1"
+                    android:inputType="text"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/_13ssp" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/_12sdp"
+            android:paddingEnd="@dimen/_12sdp"
+            android:paddingTop="@dimen/_7sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@drawable/edittext_shape">
+            <ImageView
+                android:id="@+id/ic_mobile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_mobile" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="14dp"
+                android:layout_toEndOf="@id/ic_mobile"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="mobile"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/_13ssp" />
+
+                <EditText
+                    android:id="@+id/et_mobile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:fontFamily="@font/roboto_regular"
+                    android:hint="05******"
+                    android:maxLines="1"
+                    android:inputType="number"
+                    android:padding="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/_13ssp" />
+            </LinearLayout>
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/relative_school"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/_12sdp"
+            android:paddingEnd="@dimen/_12sdp"
+            android:paddingTop="@dimen/_7sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@drawable/edittext_shape">
+            <ImageView
+                android:id="@+id/ic_school"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_school" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="14dp"
+                android:layout_toStartOf="@id/ic_back"
+                android:layout_toEndOf="@id/ic_school"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="School"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/_13ssp" />
+
+                <EditText
+                    android:id="@+id/et_school"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:fontFamily="@font/roboto_regular"
+                    android:hint=""
+                    android:padding="@dimen/_5sdp"
+                    android:maxLines="1"
+                    android:enabled="false"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/_13ssp" />
+            </LinearLayout>
+            <ImageView
+                android:id="@+id/ic_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_back" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/_50sdp">
+            <Button
+                android:id="@+id/btn_register"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Register"
+                style="?borderlessButtonStyle"
+                android:textSize="@dimen/_15ssp"
+                android:textColor="@android:color/white"
+                android:fontFamily="@font/roboto_regular"
+                android:textAllCaps="false"
+                android:paddingStart="@dimen/_37sdp"
+                android:paddingEnd="@dimen/_37sdp"
+                android:background="@drawable/skip_button_shape"/>
+
+<!--            <com.kusu.loadingbutton.LoadingButton-->
+<!--                android:id="@+id/btn_register"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Register"-->
+<!--                android:textSize="@dimen/_15ssp"-->
+<!--                android:textColor="@color/white"-->
+<!--                android:paddingStart="@dimen/_37sdp"-->
+<!--                android:paddingEnd="@dimen/_37sdp"-->
+<!--                app:lb_buttonColor="@color/colorPrimary"-->
+<!--                app:lb_isShadowEnable="false"-->
+<!--                app:lb_isCircular="true"-->
+<!--                android:textAllCaps="false"-->
+<!--                app:lb_loaderColor="@android:color/white"-->
+<!--                app:lb_shadowColor="@color/colorPrimaryDark"-->
+<!--                app:lb_shadowHeight="5dp"-->
+<!--                android:fontFamily="@font/roboto_regular"-->
+<!--                android:background="@drawable/skip_button_shape"-->
+<!--                style="?borderlessButtonStyle"-->
+<!--                />-->
+            <TextView
+                android:id="@+id/tv_skip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_regular"
+                android:text="Skip"
+                android:gravity="center"
+                android:layout_marginStart="@dimen/_27sdp"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/_12ssp" />
+        </LinearLayout>
+
+    </LinearLayout>
+</RelativeLayout>

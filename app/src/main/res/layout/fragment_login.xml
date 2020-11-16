@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:paddingStart="@dimen/_16sdp"
+    android:paddingEnd="@dimen/_16sdp"
+    android:layoutDirection="ltr"
+    tools:context=".fragment.LoginFragment">
+   <RelativeLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:paddingTop="@dimen/_37sdp"
+       android:paddingStart="@dimen/_16sdp"
+       android:paddingEnd="@dimen/_16sdp"
+       android:paddingBottom="@dimen/_27sdp"
+       android:layout_centerInParent="true"
+       android:background="@drawable/login_shape">
+      <RelativeLayout
+          android:id="@+id/relative"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:paddingStart="@dimen/_12sdp"
+          android:paddingEnd="@dimen/_12sdp"
+          android:paddingTop="@dimen/_7sdp"
+          android:paddingBottom="@dimen/_7sdp"
+          android:background="@drawable/edittext_shape">
+      <ImageView
+          android:id="@+id/ic_mobile"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:src="@drawable/ic_mobile"
+          />
+
+         <LinearLayout
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_marginStart="14dp"
+             android:layout_toEndOf="@id/ic_mobile"
+             android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_regular"
+                android:text="mobile"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/_13ssp" />
+
+            <EditText
+                android:id="@+id/et_mobile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:fontFamily="@font/roboto_regular"
+                android:hint="05******"
+                android:inputType="number"
+                android:padding="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/_13ssp" />
+         </LinearLayout>
+      </RelativeLayout>
+      <LinearLayout
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:orientation="horizontal"
+          android:layout_centerHorizontal="true"
+          android:layout_below="@id/relative"
+          android:layout_marginTop="@dimen/_50sdp">
+         <Button
+             android:id="@+id/btn_login"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="Sign In"
+             style="?borderlessButtonStyle"
+             android:textSize="@dimen/_15ssp"
+             android:textColor="@android:color/white"
+             android:fontFamily="@font/roboto_regular"
+             android:textAllCaps="false"
+             android:paddingStart="@dimen/_37sdp"
+             android:paddingEnd="@dimen/_37sdp"
+             android:background="@drawable/skip_button_shape"/>
+         <TextView
+             android:id="@+id/tv_skip"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:fontFamily="@font/roboto_regular"
+             android:text="Skip"
+             android:gravity="center"
+             android:layout_marginStart="@dimen/_27sdp"
+             android:textColor="@color/colorPrimary"
+             android:textSize="@dimen/_12ssp" />
+      </LinearLayout>
+
+   </RelativeLayout>
+</RelativeLayout>
