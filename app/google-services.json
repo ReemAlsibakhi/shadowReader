@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "556418923325",
+    "firebase_url": "https://shadow-reader-94922.firebaseio.com",
+    "project_id": "shadow-reader-94922",
+    "storage_bucket": "shadow-reader-94922.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:556418923325:android:09b6e3f59f8f238a90a354",
+        "android_client_info": {
+          "package_name": "com.reemsib.shadowreader"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "556418923325-t96dnfp8vfkkhcot3j6tglrpj63s32v0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC7lBITSrcUSOkx8DQTHlh9a9qb380sd80"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "556418923325-t96dnfp8vfkkhcot3j6tglrpj63s32v0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

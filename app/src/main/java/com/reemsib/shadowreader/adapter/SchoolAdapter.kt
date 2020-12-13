@@ -23,10 +23,7 @@ class SchoolAdapter(var activity: Activity, var data: ArrayList<School>) :
 
     class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val country = itemView.tv_school
-
-
     }
-
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
 
         val itemView = LayoutInflater.from(activity).inflate(R.layout.school_item, parent, false)
@@ -40,9 +37,7 @@ class SchoolAdapter(var activity: Activity, var data: ArrayList<School>) :
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
 
        holder.country.text = data[position].title
-
-
-        holder.itemView.setOnClickListener {
+       holder.itemView.setOnClickListener {
             if (mListener != null) {
              mListener!!.onClicked(position, data[position].id,data[position].title)
             }

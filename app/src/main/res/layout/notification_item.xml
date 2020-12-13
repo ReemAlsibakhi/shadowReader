@@ -7,7 +7,7 @@
     android:layout_marginBottom="@dimen/_7sdp"
     android:layoutDirection="ltr">
 
-    <RelativeLayout
+    <LinearLayout
         android:id="@+id/relative"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -17,10 +17,11 @@
         android:paddingStart="@dimen/_40sdp"
         android:paddingEnd="@dimen/_16sdp"
         android:paddingTop="@dimen/_12sdp"
+        android:orientation="vertical"
         android:paddingBottom="@dimen/_12sdp">
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
            <LinearLayout
@@ -41,7 +42,7 @@
                     android:layout_weight="1"
                     android:layout_height="1dp"/>
                <TextView
-                   android:id="@+id/tv_date"
+                   android:id="@+id/tv_createdAt"
                    android:layout_width="wrap_content"
                    android:layout_height="wrap_content"
                    android:fontFamily="@font/roboto_medium"
@@ -53,20 +54,67 @@
                    android:textSize="@dimen/_8ssp" />
 
            </LinearLayout>
+            <TextView
+                android:id="@+id/tv_videoName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:fontFamily="@font/roboto_regular"
+                android:text="Paragraph 1."
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/_10ssp" />
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:orientation="horizontal">
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:fontFamily="@font/roboto_regular"
+                   android:textColor="@color/textColorLight"
+                   android:text="Positives: "
+                   android:layout_marginTop="@dimen/_5sdp"
+                   android:textSize="@dimen/_10ssp" />
+               <TextView
+                   android:id="@+id/tv_positive"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="It Has Roots In A Piece Of Classiyical C"
+                   android:fontFamily="@font/roboto_regular"
+                   android:maxLines="1"
+                   android:textColor="@color/textColorLight"
+                   android:layout_marginTop="@dimen/_5sdp"
+                   android:textSize="@dimen/_11ssp" />
 
+           </LinearLayout>
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:orientation="horizontal">
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:fontFamily="@font/roboto_regular"
+                   android:textColor="@color/textColorLight"
+                   android:text="Negatives: "
+                   android:layout_marginTop="@dimen/_5sdp"
+                   android:textSize="@dimen/_11ssp" />
+               <TextView
+                   android:id="@+id/tv_negatives"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="It Has Roots In A Piece Of Classiyical C"
+                   android:fontFamily="@font/roboto_regular"
+                   android:maxLines="1"
+                   android:textColor="@color/textColorLight"
+                   android:layout_marginTop="@dimen/_5sdp"
+                   android:textSize="@dimen/_11ssp" />
 
-                <TextView
-                    android:id="@+id/tv_review"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/roboto_regular"
-                    android:text="It Has Roots In A Piece Of Classiyical CA Literature From 45 BC."
-                    android:textColor="@color/textColorLight"
-                    android:layout_marginTop="@dimen/_5sdp"
-                    android:textSize="@dimen/_11ssp" />
+           </LinearLayout>
+
             </LinearLayout>
 
-    </RelativeLayout>
+    </LinearLayout>
 
     <ImageView
         android:id="@+id/img_notification"

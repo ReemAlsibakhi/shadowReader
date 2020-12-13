@@ -1,10 +1,8 @@
-package  com.r.foodproject.ui.model
+package  com.reemsib.shadowreader.db
 
 import android.content.Context
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
-import androidx.core.database.getBlobOrNull
-import com.reemsib.shadowreader.R
 import com.reemsib.shadowreader.model.Lesson
 import com.reemsib.shadowreader.model.Paragraph
 import com.reemsib.shadowreader.model.Semester
@@ -100,50 +98,54 @@ class DatabaseHelper(context: Context) :
         p0.execSQL("INSERT INTO " + Paragraph.TABLE_NAME + "(${Paragraph.COL_NAME},${Paragraph.COL_VIDEO},${Paragraph.COL_ID_LESSON}) " + " Values ('Paragraph 5','wa7gu_Av6_k','9')")
         p0.execSQL("INSERT INTO " + Paragraph.TABLE_NAME + "(${Paragraph.COL_NAME},${Paragraph.COL_VIDEO},${Paragraph.COL_ID_LESSON}) " + " Values ('Paragraph 6','ik_elXL4vak','9')")
 
-        p0.execSQL("INSERT INTO " + Paragraph.TABLE_NAME + "(${Paragraph.COL_NAME},${Paragraph.COL_VIDEO},${Paragraph.COL_ID_LESSON}) " + " Values ('Paragraph 1','${R.raw.a1}','10')")
-        p0.execSQL("INSERT INTO " + Paragraph.TABLE_NAME + "(${Paragraph.COL_NAME},${Paragraph.COL_VIDEO},${Paragraph.COL_ID_LESSON}) " + " Values ('Paragraph 2','${R.raw.a1}','10')")
-        p0.execSQL("INSERT INTO " + Paragraph.TABLE_NAME + "(${Paragraph.COL_NAME},${Paragraph.COL_VIDEO},${Paragraph.COL_ID_LESSON}) " + " Values ('Paragraph 3','${R.raw.a1}','10')")
-        p0.execSQL("INSERT INTO " + Paragraph.TABLE_NAME + "(${Paragraph.COL_NAME},${Paragraph.COL_VIDEO},${Paragraph.COL_ID_LESSON}) " + " Values ('Paragraph 4','${R.raw.a1}','10')")
+        p0.execSQL("INSERT INTO " + Paragraph.TABLE_NAME + "(${Paragraph.COL_NAME},${Paragraph.COL_VIDEO},${Paragraph.COL_ID_LESSON}) " + " Values ('Paragraph 1','x1W1aeQdgU8','10')")
+        p0.execSQL("INSERT INTO " + Paragraph.TABLE_NAME + "(${Paragraph.COL_NAME},${Paragraph.COL_VIDEO},${Paragraph.COL_ID_LESSON}) " + " Values ('Paragraph 2','sew8c3Ybukc','10')")
+        p0.execSQL("INSERT INTO " + Paragraph.TABLE_NAME + "(${Paragraph.COL_NAME},${Paragraph.COL_VIDEO},${Paragraph.COL_ID_LESSON}) " + " Values ('Paragraph 3','W4BUxCbr6G8','10')")
+        p0.execSQL("INSERT INTO " + Paragraph.TABLE_NAME + "(${Paragraph.COL_NAME},${Paragraph.COL_VIDEO},${Paragraph.COL_ID_LESSON}) " + " Values ('Paragraph 4','AGHJTdv6DJ0','10')")
 
-        p0.execSQL("INSERT INTO " + Paragraph.TABLE_NAME + "(${Paragraph.COL_NAME},${Paragraph.COL_VIDEO},${Paragraph.COL_ID_LESSON}) " + " Values ('Paragraph 1','${R.raw.a1}','11')")
-        p0.execSQL("INSERT INTO " + Paragraph.TABLE_NAME + "(${Paragraph.COL_NAME},${Paragraph.COL_VIDEO},${Paragraph.COL_ID_LESSON}) " + " Values ('Paragraph 2','${R.raw.a1}','11')")
-        p0.execSQL("INSERT INTO " + Paragraph.TABLE_NAME + "(${Paragraph.COL_NAME},${Paragraph.COL_VIDEO},${Paragraph.COL_ID_LESSON}) " + " Values ('Paragraph 3','${R.raw.a1}','11')")
-        p0.execSQL("INSERT INTO " + Paragraph.TABLE_NAME + "(${Paragraph.COL_NAME},${Paragraph.COL_VIDEO},${Paragraph.COL_ID_LESSON}) " + " Values ('Paragraph 4','${R.raw.a1}','11')")
+        p0.execSQL("INSERT INTO " + Paragraph.TABLE_NAME + "(${Paragraph.COL_NAME},${Paragraph.COL_VIDEO},${Paragraph.COL_ID_LESSON}) " + " Values ('Paragraph 1','OeZkdXRxhOY','11')")
+        p0.execSQL("INSERT INTO " + Paragraph.TABLE_NAME + "(${Paragraph.COL_NAME},${Paragraph.COL_VIDEO},${Paragraph.COL_ID_LESSON}) " + " Values ('Paragraph 2','ZfbNxVCaGeQ','11')")
+        p0.execSQL("INSERT INTO " + Paragraph.TABLE_NAME + "(${Paragraph.COL_NAME},${Paragraph.COL_VIDEO},${Paragraph.COL_ID_LESSON}) " + " Values ('Paragraph 3','r7bOHbNgmF8','11')")
+        p0.execSQL("INSERT INTO " + Paragraph.TABLE_NAME + "(${Paragraph.COL_NAME},${Paragraph.COL_VIDEO},${Paragraph.COL_ID_LESSON}) " + " Values ('Paragraph 4','v4mFozIWjtc','11')")
 
-        p0.execSQL("INSERT INTO " + Paragraph.TABLE_NAME + "(${Paragraph.COL_NAME},${Paragraph.COL_VIDEO},${Paragraph.COL_ID_LESSON}) " + " Values ('Paragraph 1','${R.raw.a1}','12')")
-        p0.execSQL("INSERT INTO " + Paragraph.TABLE_NAME + "(${Paragraph.COL_NAME},${Paragraph.COL_VIDEO},${Paragraph.COL_ID_LESSON}) " + " Values ('Paragraph 2','${R.raw.a1}','12')")
-        p0.execSQL("INSERT INTO " + Paragraph.TABLE_NAME + "(${Paragraph.COL_NAME},${Paragraph.COL_VIDEO},${Paragraph.COL_ID_LESSON}) " + " Values ('Paragraph 3','${R.raw.a1}','12')")
-        p0.execSQL("INSERT INTO " + Paragraph.TABLE_NAME + "(${Paragraph.COL_NAME},${Paragraph.COL_VIDEO},${Paragraph.COL_ID_LESSON}) " + " Values ('Paragraph 4','${R.raw.a1}','12')")
+        p0.execSQL("INSERT INTO " + Paragraph.TABLE_NAME + "(${Paragraph.COL_NAME},${Paragraph.COL_VIDEO},${Paragraph.COL_ID_LESSON}) " + " Values ('Paragraph 1','hz1XVRVA8S4','12')")
+        p0.execSQL("INSERT INTO " + Paragraph.TABLE_NAME + "(${Paragraph.COL_NAME},${Paragraph.COL_VIDEO},${Paragraph.COL_ID_LESSON}) " + " Values ('Paragraph 2','RTU06Vdnwxs','12')")
+        p0.execSQL("INSERT INTO " + Paragraph.TABLE_NAME + "(${Paragraph.COL_NAME},${Paragraph.COL_VIDEO},${Paragraph.COL_ID_LESSON}) " + " Values ('Paragraph 3','lnemDRxTU_M','12')")
+        p0.execSQL("INSERT INTO " + Paragraph.TABLE_NAME + "(${Paragraph.COL_NAME},${Paragraph.COL_VIDEO},${Paragraph.COL_ID_LESSON}) " + " Values ('Paragraph 4','Jc4KOnCk30E','12')")
 
-        p0.execSQL("INSERT INTO " + Paragraph.TABLE_NAME + "(${Paragraph.COL_NAME},${Paragraph.COL_VIDEO},${Paragraph.COL_ID_LESSON}) " + " Values ('Paragraph 1','${R.raw.a1}','13')")
-        p0.execSQL("INSERT INTO " + Paragraph.TABLE_NAME + "(${Paragraph.COL_NAME},${Paragraph.COL_VIDEO},${Paragraph.COL_ID_LESSON}) " + " Values ('Paragraph 2','${R.raw.a1}','13')")
-        p0.execSQL("INSERT INTO " + Paragraph.TABLE_NAME + "(${Paragraph.COL_NAME},${Paragraph.COL_VIDEO},${Paragraph.COL_ID_LESSON}) " + " Values ('Paragraph 3','${R.raw.a1}','13')")
-        p0.execSQL("INSERT INTO " + Paragraph.TABLE_NAME + "(${Paragraph.COL_NAME},${Paragraph.COL_VIDEO},${Paragraph.COL_ID_LESSON}) " + " Values ('Paragraph 4','${R.raw.a1}','13')")
+        p0.execSQL("INSERT INTO " + Paragraph.TABLE_NAME + "(${Paragraph.COL_NAME},${Paragraph.COL_VIDEO},${Paragraph.COL_ID_LESSON}) " + " Values ('Paragraph 1','X_j13KF8Ask','13')")
+        p0.execSQL("INSERT INTO " + Paragraph.TABLE_NAME + "(${Paragraph.COL_NAME},${Paragraph.COL_VIDEO},${Paragraph.COL_ID_LESSON}) " + " Values ('Paragraph 2','qDx2CH-LBFc','13')")
+        p0.execSQL("INSERT INTO " + Paragraph.TABLE_NAME + "(${Paragraph.COL_NAME},${Paragraph.COL_VIDEO},${Paragraph.COL_ID_LESSON}) " + " Values ('Paragraph 3','yee90rexWBY','13')")
+        p0.execSQL("INSERT INTO " + Paragraph.TABLE_NAME + "(${Paragraph.COL_NAME},${Paragraph.COL_VIDEO},${Paragraph.COL_ID_LESSON}) " + " Values ('Paragraph 4','HiVSIRnUHEg','13')")
 
-        p0.execSQL("INSERT INTO " + Paragraph.TABLE_NAME + "(${Paragraph.COL_NAME},${Paragraph.COL_VIDEO},${Paragraph.COL_ID_LESSON}) " + " Values ('Paragraph 1','${R.raw.a1}','14')")
-        p0.execSQL("INSERT INTO " + Paragraph.TABLE_NAME + "(${Paragraph.COL_NAME},${Paragraph.COL_VIDEO},${Paragraph.COL_ID_LESSON}) " + " Values ('Paragraph 2','${R.raw.a1}','14')")
-        p0.execSQL("INSERT INTO " + Paragraph.TABLE_NAME + "(${Paragraph.COL_NAME},${Paragraph.COL_VIDEO},${Paragraph.COL_ID_LESSON}) " + " Values ('Paragraph 3','${R.raw.a1}','14')")
-        p0.execSQL("INSERT INTO " + Paragraph.TABLE_NAME + "(${Paragraph.COL_NAME},${Paragraph.COL_VIDEO},${Paragraph.COL_ID_LESSON}) " + " Values ('Paragraph 4','${R.raw.a1}','14')")
+        p0.execSQL("INSERT INTO " + Paragraph.TABLE_NAME + "(${Paragraph.COL_NAME},${Paragraph.COL_VIDEO},${Paragraph.COL_ID_LESSON}) " + " Values ('Paragraph 1','xIpS1PT4QIA','14')")
+        p0.execSQL("INSERT INTO " + Paragraph.TABLE_NAME + "(${Paragraph.COL_NAME},${Paragraph.COL_VIDEO},${Paragraph.COL_ID_LESSON}) " + " Values ('Paragraph 2','Jvs3Bx2hcnY','14')")
+        p0.execSQL("INSERT INTO " + Paragraph.TABLE_NAME + "(${Paragraph.COL_NAME},${Paragraph.COL_VIDEO},${Paragraph.COL_ID_LESSON}) " + " Values ('Paragraph 3','RLq273RHk4c','14')")
+        p0.execSQL("INSERT INTO " + Paragraph.TABLE_NAME + "(${Paragraph.COL_NAME},${Paragraph.COL_VIDEO},${Paragraph.COL_ID_LESSON}) " + " Values ('Paragraph 4','-o48VQEKXg4','14')")
+        p0.execSQL("INSERT INTO " + Paragraph.TABLE_NAME + "(${Paragraph.COL_NAME},${Paragraph.COL_VIDEO},${Paragraph.COL_ID_LESSON}) " + " Values ('Paragraph 5','knxDoTDucjg','14')")
+        p0.execSQL("INSERT INTO " + Paragraph.TABLE_NAME + "(${Paragraph.COL_NAME},${Paragraph.COL_VIDEO},${Paragraph.COL_ID_LESSON}) " + " Values ('Paragraph 6','kfnFQMaHmKE','14')")
 
-        p0.execSQL("INSERT INTO " + Paragraph.TABLE_NAME + "(${Paragraph.COL_NAME},${Paragraph.COL_VIDEO},${Paragraph.COL_ID_LESSON}) " + " Values ('Paragraph 1','${R.raw.a1}','15')")
-        p0.execSQL("INSERT INTO " + Paragraph.TABLE_NAME + "(${Paragraph.COL_NAME},${Paragraph.COL_VIDEO},${Paragraph.COL_ID_LESSON}) " + " Values ('Paragraph 2','${R.raw.a1}','15')")
-        p0.execSQL("INSERT INTO " + Paragraph.TABLE_NAME + "(${Paragraph.COL_NAME},${Paragraph.COL_VIDEO},${Paragraph.COL_ID_LESSON}) " + " Values ('Paragraph 3','${R.raw.a1}','15')")
-        p0.execSQL("INSERT INTO " + Paragraph.TABLE_NAME + "(${Paragraph.COL_NAME},${Paragraph.COL_VIDEO},${Paragraph.COL_ID_LESSON}) " + " Values ('Paragraph 4','${R.raw.a1}','15')")
+        p0.execSQL("INSERT INTO " + Paragraph.TABLE_NAME + "(${Paragraph.COL_NAME},${Paragraph.COL_VIDEO},${Paragraph.COL_ID_LESSON}) " + " Values ('Paragraph 1','WiEp7AwkoJY','15')")
+        p0.execSQL("INSERT INTO " + Paragraph.TABLE_NAME + "(${Paragraph.COL_NAME},${Paragraph.COL_VIDEO},${Paragraph.COL_ID_LESSON}) " + " Values ('Paragraph 2','OC2Ra7Z7_WM','15')")
+        p0.execSQL("INSERT INTO " + Paragraph.TABLE_NAME + "(${Paragraph.COL_NAME},${Paragraph.COL_VIDEO},${Paragraph.COL_ID_LESSON}) " + " Values ('Paragraph 3','_CODSAkGd40','15')")
+        p0.execSQL("INSERT INTO " + Paragraph.TABLE_NAME + "(${Paragraph.COL_NAME},${Paragraph.COL_VIDEO},${Paragraph.COL_ID_LESSON}) " + " Values ('Paragraph 4','vdgPvikqmag','15')")
 
-        p0.execSQL("INSERT INTO " + Paragraph.TABLE_NAME + "(${Paragraph.COL_NAME},${Paragraph.COL_VIDEO},${Paragraph.COL_ID_LESSON}) " + " Values ('Paragraph 1','${R.raw.a1}','16')")
-        p0.execSQL("INSERT INTO " + Paragraph.TABLE_NAME + "(${Paragraph.COL_NAME},${Paragraph.COL_VIDEO},${Paragraph.COL_ID_LESSON}) " + " Values ('Paragraph 2','${R.raw.a1}','16')")
-        p0.execSQL("INSERT INTO " + Paragraph.TABLE_NAME + "(${Paragraph.COL_NAME},${Paragraph.COL_VIDEO},${Paragraph.COL_ID_LESSON}) " + " Values ('Paragraph 3','${R.raw.a1}','16')")
-        p0.execSQL("INSERT INTO " + Paragraph.TABLE_NAME + "(${Paragraph.COL_NAME},${Paragraph.COL_VIDEO},${Paragraph.COL_ID_LESSON}) " + " Values ('Paragraph 4','${R.raw.a1}','16')")
+        p0.execSQL("INSERT INTO " + Paragraph.TABLE_NAME + "(${Paragraph.COL_NAME},${Paragraph.COL_VIDEO},${Paragraph.COL_ID_LESSON}) " + " Values ('Paragraph 1','Td1dpbRLWE0','16')")
+        p0.execSQL("INSERT INTO " + Paragraph.TABLE_NAME + "(${Paragraph.COL_NAME},${Paragraph.COL_VIDEO},${Paragraph.COL_ID_LESSON}) " + " Values ('Paragraph 2','HHI69mCcjBk','16')")
+        p0.execSQL("INSERT INTO " + Paragraph.TABLE_NAME + "(${Paragraph.COL_NAME},${Paragraph.COL_VIDEO},${Paragraph.COL_ID_LESSON}) " + " Values ('Paragraph 3','zM0HeOncAzg','16')")
+        p0.execSQL("INSERT INTO " + Paragraph.TABLE_NAME + "(${Paragraph.COL_NAME},${Paragraph.COL_VIDEO},${Paragraph.COL_ID_LESSON}) " + " Values ('Paragraph 4','ZjtqzOH-tyw','16')")
 
-        p0.execSQL("INSERT INTO " + Paragraph.TABLE_NAME + "(${Paragraph.COL_NAME},${Paragraph.COL_VIDEO},${Paragraph.COL_ID_LESSON}) " + " Values ('Paragraph 1','${R.raw.a1}','17')")
-        p0.execSQL("INSERT INTO " + Paragraph.TABLE_NAME + "(${Paragraph.COL_NAME},${Paragraph.COL_VIDEO},${Paragraph.COL_ID_LESSON}) " + " Values ('Paragraph 2','${R.raw.a1}','17')")
-        p0.execSQL("INSERT INTO " + Paragraph.TABLE_NAME + "(${Paragraph.COL_NAME},${Paragraph.COL_VIDEO},${Paragraph.COL_ID_LESSON}) " + " Values ('Paragraph 3','${R.raw.a1}','17')")
-        p0.execSQL("INSERT INTO " + Paragraph.TABLE_NAME + "(${Paragraph.COL_NAME},${Paragraph.COL_VIDEO},${Paragraph.COL_ID_LESSON}) " + " Values ('Paragraph 4','${R.raw.a1}','17')")
+        p0.execSQL("INSERT INTO " + Paragraph.TABLE_NAME + "(${Paragraph.COL_NAME},${Paragraph.COL_VIDEO},${Paragraph.COL_ID_LESSON}) " + " Values ('Paragraph 1','36hVnt7GjOU','17')")
+        p0.execSQL("INSERT INTO " + Paragraph.TABLE_NAME + "(${Paragraph.COL_NAME},${Paragraph.COL_VIDEO},${Paragraph.COL_ID_LESSON}) " + " Values ('Paragraph 2','9rFWGvZFLEk','17')")
+        p0.execSQL("INSERT INTO " + Paragraph.TABLE_NAME + "(${Paragraph.COL_NAME},${Paragraph.COL_VIDEO},${Paragraph.COL_ID_LESSON}) " + " Values ('Paragraph 3','KwYEoM23jd4','17')")
+        p0.execSQL("INSERT INTO " + Paragraph.TABLE_NAME + "(${Paragraph.COL_NAME},${Paragraph.COL_VIDEO},${Paragraph.COL_ID_LESSON}) " + " Values ('Paragraph 4','UA1WzIDviW0','17')")
 
-        p0.execSQL("INSERT INTO " + Paragraph.TABLE_NAME + "(${Paragraph.COL_NAME},${Paragraph.COL_VIDEO},${Paragraph.COL_ID_LESSON}) " + " Values ('Paragraph 1','${R.raw.a1}','18')")
-        p0.execSQL("INSERT INTO " + Paragraph.TABLE_NAME + "(${Paragraph.COL_NAME},${Paragraph.COL_VIDEO},${Paragraph.COL_ID_LESSON}) " + " Values ('Paragraph 2','${R.raw.a1}','18')")
-        p0.execSQL("INSERT INTO " + Paragraph.TABLE_NAME + "(${Paragraph.COL_NAME},${Paragraph.COL_VIDEO},${Paragraph.COL_ID_LESSON}) " + " Values ('Paragraph 3','${R.raw.a1}','18')")
-        p0.execSQL("INSERT INTO " + Paragraph.TABLE_NAME + "(${Paragraph.COL_NAME},${Paragraph.COL_VIDEO},${Paragraph.COL_ID_LESSON}) " + " Values ('Paragraph 4','${R.raw.a1}','18')")
+        p0.execSQL("INSERT INTO " + Paragraph.TABLE_NAME + "(${Paragraph.COL_NAME},${Paragraph.COL_VIDEO},${Paragraph.COL_ID_LESSON}) " + " Values ('Paragraph 1','wDPXsOgTHyY','18')")
+        p0.execSQL("INSERT INTO " + Paragraph.TABLE_NAME + "(${Paragraph.COL_NAME},${Paragraph.COL_VIDEO},${Paragraph.COL_ID_LESSON}) " + " Values ('Paragraph 2','_-1JXRwn0kc','18')")
+        p0.execSQL("INSERT INTO " + Paragraph.TABLE_NAME + "(${Paragraph.COL_NAME},${Paragraph.COL_VIDEO},${Paragraph.COL_ID_LESSON}) " + " Values ('Paragraph 3','K1S6e1j1pA8','18')")
+        p0.execSQL("INSERT INTO " + Paragraph.TABLE_NAME + "(${Paragraph.COL_NAME},${Paragraph.COL_VIDEO},${Paragraph.COL_ID_LESSON}) " + " Values ('Paragraph 4','LFmRyJqnkms','18')")
+        p0.execSQL("INSERT INTO " + Paragraph.TABLE_NAME + "(${Paragraph.COL_NAME},${Paragraph.COL_VIDEO},${Paragraph.COL_ID_LESSON}) " + " Values ('Paragraph 5','TWHTYODb5j8','18')")
+        p0.execSQL("INSERT INTO " + Paragraph.TABLE_NAME + "(${Paragraph.COL_NAME},${Paragraph.COL_VIDEO},${Paragraph.COL_ID_LESSON}) " + " Values ('Paragraph 6','mbUm-RlI_bQ','18')")
 
     }
 
@@ -174,6 +176,16 @@ class DatabaseHelper(context: Context) :
         return lessons
     }
 
+    fun getVideo(videoId:Int):Paragraph{
+        val c = db.rawQuery(
+            "select * from ${Paragraph.TABLE_NAME} WHERE ${Paragraph.COL_ID} = $videoId  order by ${Paragraph.COL_ID}  ASC",
+            null)
+        c.moveToFirst()
+        val paragr = Paragraph(c.getInt(0), c.getString(1), c.getString(2))
+
+         return paragr
+        }
+
     fun getParag(lessonId:Int): ArrayList<Paragraph> {
         val paragraphs = ArrayList<Paragraph>()
         val c = db.rawQuery(
@@ -189,211 +201,4 @@ class DatabaseHelper(context: Context) :
         c.close()
         return paragraphs
     }
-//    ,c.getInt(3)>0,c.getInt(4)>0
-
 }
-    //==================================================================
-
-//    fun addProduct(name: String, description: String, prodAmount: Int, price: Double, is_fav: Int, image: String, rate: Int, id_categ: Int): Boolean {
-//        val cv = ContentValues()
-//        cv.put(Product.COL_NAME, name)
-//        cv.put(Product.COL_DESC, description)
-//        cv.put(Product.COL_AMOUNT, prodAmount)
-//        cv.put(Product.COL_PRICE, price)
-//        cv.put(Product.COL_ISFAV, is_fav)
-//        cv.put(Product.COL_IMG, image)
-//        cv.put(Product.COL_RATE, rate)
-//        cv.put(Product.COL_ID_CATEGORIES, id_categ)
-//        return db.insert(Product.TABLE_NAME, null, cv) > 0
-//    }
-
-//    fun save(id: Int): Boolean {
-//        val cv = ContentValues()
-//        cv.put(Product.COL_ISFAV, 1)
-//        Log.e("save", cv.toString())
-//        return db.update(Product.TABLE_NAME, cv, "id = $id", null) > 0
-//    }
-
-//    fun getFavourite(): ArrayList<Product> {
-//
-//        val products = ArrayList<Product>()
-//        val c =
-//            db.rawQuery(
-//                "select * from ${Product.TABLE_NAME} WHERE ${Product.COL_ISFAV}=1  order by ${Product.COL_ID} DESC",
-//                null
-//            )
-//        c.moveToFirst()
-//        while (!c.isAfterLast) {
-//            val prod = Product(
-//                c.getInt(0), c.getString(1), c.getString(2),
-//                c.getInt(3), c.getInt(4), c.getDouble(5), c.getInt(6), c.getInt(7), c.getInt(8)
-//            )
-//            products.add(prod)
-//            c.moveToNext()
-//        }
-//        c.close()
-//        return products
-//    }
-
-
-//    fun getBurger(): ArrayList<Product> {
-//        val products = ArrayList<Product>()
-//        val c =
-//            db.rawQuery(
-//                "select * from ${Product.TABLE_NAME} WHERE ${Product.COL_ID_CATEGORIES}=0  order by ${Product.COL_ID}   DESC",
-//                null
-//            )
-//        c.moveToFirst()
-//        while (!c.isAfterLast) {
-//            val prod = Product(
-//                c.getInt(0), c.getString(1), c.getString(2),
-//                c.getInt(3), c.getInt(4), c.getDouble(5), c.getInt(6), c.getInt(7), c.getInt(8)
-//            )
-//            products.add(prod)
-//            c.moveToNext()
-//        }
-//        c.close()
-//        return products
-//    }
-
-//    fun getPizza(): ArrayList<Product> {
-//        val products = ArrayList<Product>()
-//        val c =
-//            db.rawQuery(
-//                "select * from ${Product.TABLE_NAME} WHERE ${Product.COL_ID_CATEGORIES}=1  order by ${Product.COL_ID}   DESC",
-//                null
-//            )
-//        c.moveToFirst()
-//        while (!c.isAfterLast) {
-//            val prod = Product(
-//                c.getInt(0), c.getString(1), c.getString(2),
-//                c.getInt(3), c.getInt(4), c.getDouble(5), c.getInt(6), c.getInt(7), c.getInt(8)
-//            )
-//            products.add(prod)
-//            c.moveToNext()
-//        }
-//        c.close()
-//        return products
-//    }
-
-//    fun getDessert(): ArrayList<Product> {
-//        val products = ArrayList<Product>()
-//        val c =
-//            db.rawQuery(
-//                "select * from ${Product.TABLE_NAME} WHERE ${Product.COL_ID_CATEGORIES}=2  order by ${Product.COL_ID}   DESC",
-//                null
-//            )
-//        c.moveToFirst()
-//        while (!c.isAfterLast) {
-//            val prod = Product(
-//                c.getInt(0), c.getString(1), c.getString(2),
-//                c.getInt(3), c.getInt(4), c.getDouble(5), c.getInt(6), c.getInt(7), c.getInt(8)
-//            )
-//            products.add(prod)
-//            c.moveToNext()
-//        }
-//        c.close()
-//        return products
-//    }
-
-//
-//    fun deleteOrder(id: Int): Boolean {
-//         return db.delete(Orders.TABLE_NAME, "id = $id", null) > 0
-//        return true
-//    }
-
-//    fun updateProduct(oldId: Int, name: String, des: String): Boolean {
-//        val cv = ContentValues()
-//        cv.put(Product.COL_NAME, name)
-//        cv.put(Product.COL_DESC, des)
-//        return db.update(Product.TABLE_NAME, cv, "id = $oldId", null) > 0
-//    }
-
-    /////////// categories
-//    fun addCategory(name: String): Boolean {
-//        val cv = ContentValues()
-//        cv.put(Categories.COL_NAME, name)
-//        return db.insert(Categories.TABLE_NAME, null, cv) > 0
-//    }
-    /////////users
-
-//    fun addUser(image: String, name: String, email: String, password: String): Boolean {
-//        val cv = ContentValues()
-//        cv.put(Users.COL_IMG, image)
-//        cv.put(Users.COL_NAME, name)
-//        cv.put(Users.COL_EMAIL, email)
-//        cv.put(Users.COL_PASSWORD, password)
-//        return db.insert(Users.TABLE_NAME, null, cv) > 0
-//    }
-
-//    fun userAuth(email: String, password: String): Int {
-//        var i: Int = -1
-//        val selectionArgs = arrayOf<String>(email, password)
-//        val c =
-//            db.rawQuery(
-//                "select * from ${Users.TABLE_NAME} where ${Users.COL_EMAIL}=? and ${Users.COL_PASSWORD}=?",
-//                selectionArgs
-//            )
-//        c.moveToFirst()
-//        if (!c.isAfterLast) {
-//            i = c.getInt(0)
-//        }
-//        return if (i > 0) {
-//            i
-//        } else {
-//            -1
-//        }
-//    }
-
-    /////////orders
-//    fun addOrder( id_prod: Int, user_id: Int, name:String ,image:String, price:Double): Boolean {
-//        val cv = ContentValues()
-//        cv.put(Orders.COL_PRODUCT_ID, id_prod)
-//        cv.put(Orders.COL_USER_ID, user_id)
-//        cv.put(Orders.COL_NAME, name)
-//        cv.put(Orders.COL_IMG, image)
-//        cv.put(Orders.COL_PRICE, price)
-//        return db.insert(Orders.TABLE_NAME, null, cv) > 0
-//    }
-
-//    fun getOrder(id_user:Int): ArrayList<Orders> {
-//        val order = ArrayList<Orders>()
-//        val c =
-//            db.rawQuery(
-//                "select * from ${Orders.TABLE_NAME} WHERE ${Orders.COL_USER_ID}=$id_user order by ${Orders.COL_ID}   DESC",
-//                null
-//            )
-//        c.moveToFirst()
-//        while (!c.isAfterLast) {
-//            val ord = Orders(
-//                c.getInt(0), c.getInt(1), c.getInt(2),c.getString(3),
-//                c.getInt(4),c.getDouble(5))
-//            order.add(ord)
-//            c.moveToNext()
-//        }
-//        c.close()
-//        return order
-   // }
-//    fun addPrices(price: Double): Boolean{
-//        val cv = ContentValues()
-//   //     cv.put(Price.COL, price)
-//        cv.put(Price.COL_PRICE, price)
-//        return db.insert(Price.TABLE_NAME, null, cv) > 0
-//    }
-//    fun getPrices(): ArrayList<Price> {
-//   //     var i: Int = -1
-//       val price = ArrayList<Price>()
-//        val c =
-//            db.rawQuery(
-//                "select ${Price.COL_PRICE} from ${Price.TABLE_NAME}",null)
-//        c.moveToFirst()
-//        while (!c.isAfterLast) {
-//            val pri = Price(c.getDouble(0))
-//             price.add(pri)
-//            c.moveToNext()
-//        }
-//        c.close()
-//        return price
-//    }
-
-

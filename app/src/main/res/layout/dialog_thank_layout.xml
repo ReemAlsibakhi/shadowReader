@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="@dimen/_16sdp"
+    android:gravity="center_horizontal"
+    android:background="@drawable/custom_dialog_shape">
+ <ImageView
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:src="@drawable/ic_thank_you"/>
+   <TextView
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:text="Thank you"
+       android:fontFamily="@font/roboto_bold"
+       android:textSize="@dimen/_20ssp"
+       android:textColor="@color/colorPrimary"/>
+    <TextView
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:text="You will soon receive an evaluation from your teacher."
+       android:fontFamily="@font/roboto_regular"
+        android:textAlignment="center"
+       android:textSize="@dimen/_13ssp"
+        android:textColor="@color/textColor"
+        android:layout_marginTop="@dimen/_4sdp"
+       />
+    <Button
+        android:id="@+id/btn_ok"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ok"
+        android:textColor="#fff"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:fontFamily="@font/roboto_bold"
+        android:background="@drawable/skip_button_shape"/>
+</LinearLayout>

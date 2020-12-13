@@ -25,10 +25,6 @@ class LessonAdapter (var activity: Activity, var data: ArrayList<Lesson>):
 
     class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val lesson = itemView.tv_lessonName
-//        val isCompleted = itemView.tv_completed
-//        val imgCompleted = itemView.img_completed
-
-
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
@@ -42,9 +38,12 @@ class LessonAdapter (var activity: Activity, var data: ArrayList<Lesson>):
     }
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
-
-
         holder.lesson.text = data[position].title
+        holder.itemView.setOnClickListener {
+            if (mListener != null) {
+                mListener!!.onClicked(position, data[position].id,data[position].title)
+            }
+        }
         //holder.isCompleted.text = data[position].isComplete.toString()
 //        if (data[position].isComplete){
 //            holder.isCompleted.text = "Complete"
@@ -57,11 +56,7 @@ class LessonAdapter (var activity: Activity, var data: ArrayList<Lesson>):
 //        holder.linearCate.setOnClickListener {
 //            holder.expanSubcateg.toggle()
 //        }
-        holder.itemView.setOnClickListener {
-            if (mListener != null) {
-              mListener!!.onClicked(position, data[position].id,data[position].title)
-            }
-        }
+
     }
 }
 

@@ -8,6 +8,9 @@ import androidx.recyclerview.widget.RecyclerView
 import com.reemsib.shadowreader.R
 import com.reemsib.shadowreader.model.Notification
 import kotlinx.android.synthetic.main.notification_item.view.*
+import java.text.SimpleDateFormat
+import java.util.*
+import kotlin.collections.ArrayList
 
 class NotificationAdapter (var activity: Activity, var data: ArrayList<Notification>):
     RecyclerView.Adapter<NotificationAdapter.MyViewHolder>() {
@@ -16,7 +19,7 @@ class NotificationAdapter (var activity: Activity, var data: ArrayList<Notificat
     private var mListener: OnItemClickListener? = null
 
     interface OnItemClickListener {
-        fun onClicked(clickedItemPosition: Int, id: Int)
+        fun onClicked(clickedItemPosition: Int, id: String,rate:String,pos:String,neg:String)
     }
 
     fun setOnItemClickListener(listener: OnItemClickListener) {
@@ -25,14 +28,12 @@ class NotificationAdapter (var activity: Activity, var data: ArrayList<Notificat
 
     class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val lesson = itemView.tv_lessonName
-        val review = itemView.tv_review
-        val date = itemView.tv_date
-
-
+        val videoName = itemView.tv_videoName
+        val createdAt = itemView.tv_createdAt
+        val positive = itemView.tv_positive
+        val negatives = itemView.tv_negatives
     }
-
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
-
         val itemView = LayoutInflater.from(activity).inflate(R.layout.notification_item, parent, false)
         return MyViewHolder(itemView)
     }
@@ -42,28 +43,27 @@ class NotificationAdapter (var activity: Activity, var data: ArrayList<Notificat
     }
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
+        holder.lesson.text = data[position].lesson_name
+        holder.videoName.text = data[position].video_name
+        holder.createdAt.text = getFormatDate(data[position].created_at)
+        holder.positive.text = data[position].positive_review
+        holder.negatives.text = data[position].negative_review
 
-
-        holder.lesson.text = data[position].leesonName
-        holder.review.text = data[position].review
-        holder.date.text = data[position].date
-        //holder.isCompleted.text = data[position].isComplete.toString()
-//        if (data[position].isComplete){
-//            holder.isCompleted.text = "Complete"
-//           holder.imgCompleted.setImageResource(R.drawable.ic_complete)
-//        }else{
-//            holder.isCompleted.text = "Not Completed"
-//            holder.imgCompleted.setImageResource(R.drawable.ic_not_completed)
-//        }
-//
-//        holder.linearCate.setOnClickListener {
-//            holder.expanSubcateg.toggle()
-//        }
         holder.itemView.setOnClickListener {
             if (mListener != null) {
-              mListener!!.onClicked(position, data[position].id)
+              mListener!!.onClicked(position, data[position].id,
+                  data[position].rate,
+                  data[position].positive_review,
+                  data[position].negative_review)
             }
         }
+    }
+    private fun getFormatDate(createdAt: String):String {
+        val date1 = SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'").parse(createdAt)
+        val dateFormat = SimpleDateFormat("dd/mm/yyyy", Locale.ENGLISH)
+        dateFormat.timeZone = TimeZone.getDefault()
+        val s= dateFormat.format(date1!!)
+        return s
     }
 }
 

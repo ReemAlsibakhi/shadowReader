@@ -83,12 +83,14 @@
              android:paddingStart="@dimen/_37sdp"
              android:paddingEnd="@dimen/_37sdp"
              android:background="@drawable/skip_button_shape"/>
-         <TextView
+         <Button
              android:id="@+id/tv_skip"
              android:layout_width="wrap_content"
              android:layout_height="wrap_content"
              android:fontFamily="@font/roboto_regular"
              android:text="Skip"
+             android:textAllCaps="false"
+             android:background="@null"
              android:gravity="center"
              android:layout_marginStart="@dimen/_27sdp"
              android:textColor="@color/colorPrimary"

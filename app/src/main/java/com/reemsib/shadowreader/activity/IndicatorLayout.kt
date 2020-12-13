@@ -45,14 +45,11 @@ class IndicatorLayout : LinearLayout {
 
         for (i in 0 until indicatorCount) {
             val indicator = View(context)
-
             // setting indicator layout margin
             val layoutParams = LayoutParams(px(10f), px(10f))
             layoutParams.setMargins(px(3f), px(3f), px(3f), px(3f))
             indicator.layoutParams = layoutParams
-
             indicator.setBackgroundResource(R.drawable.indicator_inactive)
-
             // add the view to indicator layout
             addView(indicator)
         }
@@ -65,9 +62,7 @@ class IndicatorLayout : LinearLayout {
 
     fun selectCurrentPosition(position: Int) {
         if (position >= 0 && position <= indicatorCount) {
-
             selectedPosition = position
-
             for (index in 0 until indicatorCount) {
                 val indicator = getChildAt(index)
 

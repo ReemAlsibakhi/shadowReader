@@ -25,7 +25,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingStart="@dimen/_16sdp"
-        android:background="@drawable/ic_lessons_first_semester__background">
+        android:background="@drawable/ic_lessons_first_semester_background">
 <!--        <ImageView-->
 <!--            android:layout_width="wrap_content"-->
 <!--            android:layout_height="wrap_content"-->

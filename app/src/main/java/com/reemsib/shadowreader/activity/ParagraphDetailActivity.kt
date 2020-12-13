@@ -11,6 +11,7 @@ import android.view.View
 import android.widget.SeekBar
 import android.widget.SeekBar.OnSeekBarChangeListener
 import android.widget.Toast
+import androidx.annotation.NonNull
 import androidx.annotation.RequiresApi
 import androidx.core.content.ContextCompat
 import androidx.transition.TransitionManager
@@ -18,6 +19,7 @@ import com.google.android.youtube.player.YouTubeBaseActivity
 import com.google.android.youtube.player.YouTubeInitializationResult
 import com.google.android.youtube.player.YouTubePlayer
 import com.google.android.youtube.player.YouTubePlayerView
+import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.listeners.AbstractYouTubePlayerListener
 import com.reemsib.shadowreader.R
 import com.reemsib.shadowreader.adapter.RecordingAdapter
 import com.reemsib.shadowreader.model.Recording
@@ -31,7 +33,7 @@ import java.util.*
 class ParagraphDetailActivity : YouTubeBaseActivity(), YouTubePlayer.OnInitializedListener, View.OnClickListener{
     private val RECOVERY_REQUEST = 1
     private var youTubeView: YouTubePlayerView? = null
-    var video: String? = null
+    private var video: String? = null
     private var lesson: String? = null
     private var paragraph: String? = null
     private var videoId: Int? = null
@@ -65,7 +67,14 @@ class ParagraphDetailActivity : YouTubeBaseActivity(), YouTubePlayer.OnInitializ
             Log.e("lesson_video", lesson + "" + paragraph + "")
         }
 
-        youTubeView =  findViewById(R.id.youtube_view) as (YouTubePlayerView)
+ //       youTubeView =  findViewById(R.id.youtube_view) as (YouTubePlayerView)
+        youtube_player_view.getPlayerUiController().showFullscreenButton(true)
+        youtube_player_view.addYouTubePlayerListener(object : AbstractYouTubePlayerListener() {
+            fun onReady(@NonNull youTubePlayer: YouTubePlayer) {
+                val videoId = "YE7VzlLtp-4"
+                //youTubePlayer.loadVideo(videoId, 0f)
+            }
+        })
 
         youTubeView!!.initialize(Config.YOUTUBE_API_KEY, this)
 

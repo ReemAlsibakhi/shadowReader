@@ -195,12 +195,14 @@
 <!--                android:background="@drawable/skip_button_shape"-->
 <!--                style="?borderlessButtonStyle"-->
 <!--                />-->
-            <TextView
+            <Button
                 android:id="@+id/tv_skip"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/roboto_regular"
                 android:text="Skip"
+                android:background="@null"
+                android:textAllCaps="false"
                 android:gravity="center"
                 android:layout_marginStart="@dimen/_27sdp"
                 android:textColor="@color/colorPrimary"

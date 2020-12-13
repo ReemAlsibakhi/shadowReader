@@ -10,7 +10,7 @@ import com.android.volley.Response
 import com.android.volley.toolbox.StringRequest
 import com.google.gson.Gson
 import com.google.gson.JsonParser
-import com.r.foodproject.ui.model.DatabaseHelper
+import com.reemsib.shadowreader.db.DatabaseHelper
 import com.reemsib.shadowreader.R
 import com.reemsib.shadowreader.adapter.ParagraphAdapter
 import com.reemsib.shadowreader.model.Paragraph
@@ -18,7 +18,6 @@ import com.reemsib.shadowreader.setting.MySingleton
 import com.reemsib.shadowreader.utils.URLs
 import kotlinx.android.synthetic.main.activity_paragraph.*
 import kotlinx.android.synthetic.main.activity_paragraph.ic_back
-import kotlinx.android.synthetic.main.activity_semester.*
 import org.json.JSONException
 import org.json.JSONObject
 
@@ -40,16 +39,11 @@ class ParagraphsActivity : AppCompatActivity() {
             Log.e("id_semester","$lessonId")
             Log.e("name_lesson","$lessonName")
         }
-
         tv_lesson.text=lessonName
-
         paragList=db.getParag(lessonId!!)
-
         rv_paragraph.layoutManager= LinearLayoutManager(this)
         paragAdapter= ParagraphAdapter(this,paragList)
         rv_paragraph.adapter=paragAdapter
-        rv_paragraph.layoutManager= LinearLayoutManager(this)
-
         paragAdapter!!.setOnItemClickListener(object :ParagraphAdapter.OnItemClickListener{
             override fun onClicked(clickedItemPosition: Int, id: Int, title: String?, video: String) {
                 val i=Intent(applicationContext,DetailActivity::class.java)

@@ -3,21 +3,24 @@ package com.reemsib.shadowreader.fragment
 import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
-import cc.cloudist.acplibrary.ACProgressConstant
-import cc.cloudist.acplibrary.ACProgressFlower
+import androidx.appcompat.app.AlertDialog
 import com.android.volley.Request
 import com.android.volley.Response
 import com.android.volley.toolbox.StringRequest
+import com.google.gson.Gson
+import com.google.gson.JsonParser
 import com.reemsib.shadowreader.activity.MainActivity
 import com.reemsib.shadowreader.R
 import com.reemsib.shadowreader.model.User
 import com.reemsib.shadowreader.setting.MySingleton
 import com.reemsib.shadowreader.setting.PreferencesManager
+import com.reemsib.shadowreader.utils.BaseActivity
 import com.reemsib.shadowreader.utils.URLs
 import kotlinx.android.synthetic.main.fragment_login.*
 import kotlinx.android.synthetic.main.fragment_login.view.*
@@ -26,22 +29,18 @@ import org.json.JSONObject
 
 
 class LoginFragment : Fragment(),View.OnClickListener {
-    lateinit var dialog: ACProgressFlower
-
+    private lateinit var myDialog: AlertDialog
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         }
-
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         // Inflate the layout for this fragment
         val v= inflater.inflate(R.layout.fragment_login, container, false)
-        progressDialog()
-
+        myDialog= BaseActivity.loading(requireContext())
         v.tv_skip.setOnClickListener(this)
         v.btn_login.setOnClickListener(this)
-
         return v
     }
 
@@ -59,37 +58,22 @@ class LoginFragment : Fragment(),View.OnClickListener {
             et_mobile.requestFocus()
             return
         }
-
-        showDialog()
-
+        myDialog.show()
         val stringRequest = object : StringRequest(Request.Method.POST,
             URLs.URL_LOGIN,
             Response.Listener { response ->
-                hideDialog()
+               myDialog.hide()
                 try {
                     val obj = JSONObject(response)
 
                     if (obj.getBoolean("status")) {
-
-                        val userJson = obj.getJSONObject("user")
-                        val schoolObj =userJson.getJSONObject("school")
-                        val schoolName =schoolObj.getString("title")
-                        val token = obj.getString("token")
-
+                        val mJson = JsonParser().parse(obj.toString())
+                        val stu = Gson().fromJson<Any>(mJson, User::class.java) as User
+                        Log.e("student","${stu.token}")
+                        PreferencesManager(requireContext()).setAccessToken(stu.token)
+                        PreferencesManager(requireContext()).userLogin(stu)
                         PreferencesManager(requireContext()).setLogin(true)
-                        PreferencesManager(requireContext()).userLogin(
-                            User(
-                                userJson.getInt("id"),
-                                userJson.getString("name"),
-                                userJson.getString(
-                                    "mobile"
-                                ),
-                                token,
-                                schoolName)
-                        )
-
                         Toast.makeText(requireContext(), getString(R.string.login_success), Toast.LENGTH_SHORT).show()
-
                         val intent = Intent(requireContext(), MainActivity::class.java)
                         intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or (Intent.FLAG_ACTIVITY_NEW_TASK)
                         startActivity(intent)
@@ -102,14 +86,14 @@ class LoginFragment : Fragment(),View.OnClickListener {
                 }
             },
             Response.ErrorListener { error ->
-                hideDialog()
-                Toast.makeText(requireContext(), error.message, Toast.LENGTH_SHORT).show()
+               myDialog.hide()
+                Toast.makeText(requireContext(), getString(R.string.connect_internet), Toast.LENGTH_SHORT).show()
             }) {
 
             override fun getParams(): MutableMap<String, String> {
                 val params = HashMap<String, String>()
                 params["mobile"] = mobile
-                params["fcm_token"] = "sadasd"
+                params["fcm_token"] = PreferencesManager(requireContext()).gettFcmToken()
 
                 return params
             }
@@ -128,21 +112,5 @@ class LoginFragment : Fragment(),View.OnClickListener {
         MySingleton.getInstance(requireActivity()).addToRequestQueue(stringRequest)
 
     }
-    private fun progressDialog() {
-        dialog = ACProgressFlower.Builder(requireContext())
-            .direction(ACProgressConstant.DIRECT_CLOCKWISE)
-            .themeColor(Color.WHITE)
-            .fadeColor(Color.DKGRAY).build()
-    }
 
-    fun hideDialog() {
-        if (dialog.isShowing) {
-            dialog.dismiss()
-        }
-    }
-    fun  showDialog(){
-        if (!dialog.isShowing) {
-            dialog.show()
-        }
-    }
 }

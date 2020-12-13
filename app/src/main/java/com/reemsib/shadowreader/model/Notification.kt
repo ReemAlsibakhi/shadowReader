@@ -4,7 +4,14 @@ import android.annotation.SuppressLint
 import android.os.Parcel
 import android.os.Parcelable
 
-data class Notification(var id: Int, var leesonName: String?,var review:String, var date:String) {
+data class Notification(var id: String, var rate:String, var positive_review:String,
+                        var negative_review:String,
+                        var video_id:Int,
+                        var video_name:String,
+                        var lesson_id: Int,
+                        var lesson_name:String ,
+                        var voice_id:Int,
+                        var created_at:String) {
 
 //    @SuppressLint("NewApi")
 //    constructor(parcel: Parcel) : this(

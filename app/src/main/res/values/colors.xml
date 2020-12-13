@@ -6,6 +6,7 @@
     <color name="colorYellow">#FECA0A</color>
     <color name="colorGreen">#26B99A</color>
     <color name="colorLight">#F6F1F3</color>
+    <color name="colorGrey">#D0D0D0</color>
     <!-- for Normal mode -->
     <color name="colorWhite">#fff</color>
     <color name="textColor">#000</color>

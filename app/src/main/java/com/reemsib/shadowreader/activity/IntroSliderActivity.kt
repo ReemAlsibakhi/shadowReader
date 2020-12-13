@@ -14,7 +14,6 @@ import com.reemsib.shadowreader.fragment.Intro1Fragment
 import com.reemsib.shadowreader.fragment.Intro2Fragment
 import com.reemsib.shadowreader.fragment.Intro3Fragment
 import com.reemsib.shadowreader.setting.PreferencesManager
-import com.reemsib.shadowreader.utils.Constants
 import kotlinx.android.synthetic.main.activity_intro_slider.*
 
 class IntroSliderActivity : AppCompatActivity() {
@@ -72,12 +71,27 @@ class IntroSliderActivity : AppCompatActivity() {
             }
         })
         btn_skip.setOnClickListener {
-            startActivity(Intent(this, LoginActivity::class.java))
-            finish()
+              if(manager.isLoggedIn){
+                    val i = Intent(this, MainActivity::class.java)
+                    startActivity(i)
+                    finish()
+                }else{
+                    val i = Intent(this, LoginActivity::class.java)
+                    startActivity(i)
+                    finish()
+                }
         }
         btn_getStarted.setOnClickListener {
-            startActivity(Intent(this, LoginActivity::class.java))
-            finish()
+            if(manager.isLoggedIn){
+                val i = Intent(this, MainActivity::class.java)
+                startActivity(i)
+                finish()
+            }else{
+                val i = Intent(this, LoginActivity::class.java)
+                startActivity(i)
+                finish()
+            }
+
         }
     }
     fun registerListenerSetting() {

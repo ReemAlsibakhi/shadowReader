@@ -27,12 +27,9 @@ class ParagraphAdapter (var activity: Activity, var data: ArrayList<Paragraph>):
         val paragraph = itemView.tv_paragraph
         val watched = itemView.tv_watched
    //     val imgWatched = itemView.img_watched
-
-
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
-
         val itemView = LayoutInflater.from(activity).inflate(R.layout.paragraph_item, parent, false)
         return MyViewHolder(itemView)
     }
@@ -42,19 +39,7 @@ class ParagraphAdapter (var activity: Activity, var data: ArrayList<Paragraph>):
     }
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
-
-
         holder.paragraph.text = data[position].title
- //       holder.watched.text = data[position].is_watched.toString()
-//
-//        if (data[position].is_watched){
-//            holder.watched.text = "Watched"
-//           holder.imgWatched.setImageResource(R.drawable.ic_complete)
-//        }else{
-//            holder.watched.text = "Not Watched"
-//            holder.imgWatched.setImageResource(R.drawable.ic_not_completed)
-//        }
-
         holder.itemView.setOnClickListener {
             if (mListener != null) {
               mListener!!.onClicked(position, data[position].id,data[position].title,data[position].video_path)

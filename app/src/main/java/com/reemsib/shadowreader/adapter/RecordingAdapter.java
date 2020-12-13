@@ -25,8 +25,6 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 public class RecordingAdapter extends RecyclerView.Adapter<RecordingAdapter.ViewHolder>{
-
-
     private ArrayList<Recording> recordingArrayList;
     private Context context;
     private MediaPlayer mPlayer;
@@ -100,9 +98,7 @@ public class RecordingAdapter extends RecyclerView.Adapter<RecordingAdapter.View
                 public void onClick(View view) {
                     int position = getAdapterPosition();
                     Recording recording = recordingArrayList.get(position);
-
                     recordingUri = recording.getUri();
-
                     if (isPlaying) {
                         stopPlaying();
                         if (position == last_index) {

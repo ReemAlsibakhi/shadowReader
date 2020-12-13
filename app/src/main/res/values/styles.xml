@@ -13,4 +13,11 @@
         <item name="android:windowContentOverlay">@null</item>
     </style>
 
+    <style name="RatingBar" parent="Theme.AppCompat">
+        <item name="colorControlNormal">@color/colorGrey</item>
+        <item name="colorControlActivated">@color/colorYellow</item>
+    </style>
+    <style name="myDialog" parent="Theme.AppCompat.Dialog">
+        <item name="android:windowNoTitle">true</item>
+    </style>
 </resources>
